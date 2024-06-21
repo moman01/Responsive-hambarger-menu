@@ -6,3 +6,81 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+/* step-1 : Hide the input type and hamburger lines */
+
+.nav-bar input[type="checkbox"],.nav-bar .hamburger-lines{
+    display: none;
+}
+
+/* step-2 : Container-sizing */
+
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: auto;
+}
+
+/* step-3: Navbar - styling */
+.nav-bar{
+    position: fixed;
+    width: 100%;
+    background-color: rgb(211, 148, 12);
+    color: #fff;
+}
+
+/* step-4: Nav-bar container Stylling */
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+/* step-5: Link Styling */
+
+.menu-items{
+    display: flex;
+}
+
+.menu-items li{
+    list-style-type: none;
+    margin-left: 1.5rem;
+}
+.menu-items li a{
+    text-decoration: none;
+    color:#fff;
+}
+.menu-items a:hover{
+    color: #f1c40f;
+}
+
+/* Mobile Responsive */
+
+@media (max-width:768px) {
+    /* step-6:Hamburger starts from here  */
+    .nav-bar input[type="checkbox"],.nav-bar .hamburger-lines{
+    display: block;
+}
+/* Set navbar container to Block and set Relative  */
+
+.navbar-container{
+    display: block;
+    position: relative;
+    height: 64px;
+}
+/* Input Checkbox Styling */
+
+.navbar-container input[type="checkbox"]{
+    position: absolute;
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+}
